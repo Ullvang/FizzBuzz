@@ -6,8 +6,13 @@ namespace FizzBuzz
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("This is a test");
-            Console.WriteLine("Another test");
+            IFizzBuzzService fizzBuzzService = new FizzBuzzService();
+
+            foreach (var result in fizzBuzzService.GetFizzBuzz(100))
+            {
+                Console.WriteLine(result);
+            }
+            Console.ReadLine();
         }
     }
 }
