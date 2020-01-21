@@ -1,3 +1,4 @@
+using FizzBuzz;
 using System;
 using Xunit;
 
@@ -13,7 +14,9 @@ namespace XUnitTestFizzBuzz
         [InlineData(15, "FizzBuzz")]
         public void TestFizzBuzz(uint num, string expected)
         {
-            string actual = GetFizzBuzz(num);
+            IFizzBuzzService fizzBuzzService = new FizzBuzzService();
+            string[] actualArray = fizzBuzzService.GetFizzBuzz(num);
+            string actual = actualArray[num - 1];
             Assert.Equal(expected, actual);
         }
         

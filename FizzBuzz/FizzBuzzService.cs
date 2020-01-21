@@ -9,7 +9,7 @@ namespace FizzBuzz
         string[] GetFizzBuzz(uint number);
     }
 
-    class FizzBuzzService : IFizzBuzzService
+    public class FizzBuzzService : IFizzBuzzService
     {
         public string[] GetFizzBuzz(uint number)
         {
